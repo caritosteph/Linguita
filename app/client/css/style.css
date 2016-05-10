@@ -1,9 +1,3 @@
-/* Custom Stylesheet */
-/**
- *
- * Made By Joash Pereira
- * Thanks for MaterializeCSS.com
- */
 
 .default_color{background-color: #673AB7 !important}
 
@@ -234,6 +228,9 @@ nav ul a {
     #feature-done {
         padding-top: 0;
     }
+    i.tamanio{
+        font-size: 4rem!important;
+    }
 }
 
 input, textarea {
@@ -359,4 +356,10 @@ footer.page-footer {
 }
 #more{
     padding-bottom: 0rem;
+}
+a {
+    color: #009688;
+}
+i.tamanio{
+   font-size: 6rem;
 }

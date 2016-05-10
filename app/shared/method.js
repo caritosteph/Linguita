@@ -1,4 +1,4 @@
-/*global Chats*/
+/*global Chats
 Meteor.methods({
     addChat: function(filter, otherUserId) {
         var chat = Chats.findOne(filter);
@@ -18,4 +18,4 @@ Meteor.methods({
         	return;
         }
     }
-});
+});*/

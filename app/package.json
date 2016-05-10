@@ -1,10 +1,27 @@
 {
-  "name": "app",
+  "name": "Linguita",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor"
+    "shell": "meteor shell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caritosteph/Linguita"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
-  }
+    "meteor-node-stubs": "~0.2.0",
+    "react": "15.0.2",
+    "react-dom": "15.0.2",
+    "react-mounter": "1.2.0"
+  },
+  "version": "1.0.0",
+  "main": "main.js",
+  "keywords": [
+    "react",
+    "meteor"
+  ],
+  "author": "Carolyn Ulfe",
+  "license": "ISC",
+  "description": "Language exchange wherever you are about whatever you want"
 }

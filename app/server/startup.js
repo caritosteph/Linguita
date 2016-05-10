@@ -1,6 +1,6 @@
-import { Meteor } from 'meteor/meteor';
-/*global Chats*/
-/*global Emojis*/
+/*import { Meteor } from 'meteor/meteor';
+global Chats
+global Emojis
 Meteor.startup(() => {
   // code to run on server at 
       if (!Meteor.users.findOne()) {
@@ -25,9 +25,9 @@ Meteor.startup(() => {
             });
         }
     }
-});
+});*/
 
-Meteor.publish("users", function() {
+/*Meteor.publish("users", function() {
     return Meteor.users.find();
 });
 Meteor.publish("chats", function() {
@@ -40,3 +40,4 @@ Meteor.publish("chats", function() {
 Meteor.publish('emojis', function() {
   return Emojis.find();
 });
+*/

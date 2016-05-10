@@ -1,2 +1,2 @@
 /*global Chats*/
-Chats = new Mongo.Collection("chats");
+/*Chats = new Mongo.Collection("chats");*/
