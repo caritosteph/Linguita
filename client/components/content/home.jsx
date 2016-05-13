@@ -1,4 +1,7 @@
 import React from 'react';
+import { BlazeToReact } from 'meteor/thereactivestack:blazetoreact';
+
+const Login = BlazeToReact('login');
 /*global Home*/
 export default Home =() =>(
     <div>
@@ -9,7 +12,7 @@ export default Home =() =>(
                 <h2>Language exchange whenever you want about whatever you want.</h2>
                 <h3>Get free Linguita account</h3>
                 <br/>
-                <button className="waves-effect waves-light  red darken-4 btn"> <i className="icon-gplus"></i>&nbsp; Sign in with Google</button>
+                <Login/>
             </div>
         </div>
         <div id="intro" className="section scrollspy">
