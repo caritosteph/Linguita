@@ -7,3 +7,11 @@ export const MainLayout = ({navbar,content,footer})=>(
         {footer}
     </div>
 );
+
+export const ProfileLayout = ({navbar,content,footer}) =>(
+  <div>
+    {navbar}
+    {content}
+    {footer}
+  </div>
+);

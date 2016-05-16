@@ -1,7 +1,6 @@
 import React from 'react';
-import { BlazeToReact } from 'meteor/thereactivestack:blazetoreact';
+import Login from '/client/components/content/login.jsx'
 
-const Login = BlazeToReact('login');
 /*global Home*/
 export default Home =() =>(
     <div>

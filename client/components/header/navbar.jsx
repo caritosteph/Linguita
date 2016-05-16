@@ -17,6 +17,6 @@ export default Navbar = () =>(
                     </ul>
                 <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="mdi-navigation-menu"></i></a>
             </div>
-        </nav> 
+        </nav>
     </div>
-); 
+);

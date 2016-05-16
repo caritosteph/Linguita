@@ -18,7 +18,7 @@
 }
 
 #nav_f{
-    box-shadow: none !important; 
+    box-shadow: none !important;
     -webkit-box-shadow:none !important;
 }
 
@@ -335,11 +335,10 @@ footer.page-footer {
     position:absolute;
 }
 #features{
-    
     background-color: rgb(247,247,247);
 }
 #feature-done{
-    padding-top:15%;    
+    padding-top:15%;
 }
 #more{
     background-color: #ffffff;
@@ -362,4 +361,23 @@ a {
 }
 i.tamanio{
    font-size: 6rem;
+}
+.avatar{
+  width: 88px;
+  height: 88px;
+  border-radius: 54px;
+}
+li.card-user{
+  background-color: #673AB7;
+}
+.topic-container{
+  cursor: pointer;
+}
+@media only screen and (min-width: 993px){
+  main {
+      padding-left: 221px;
+  }
+  .container {
+      width: 94%;
+  }
 }
