@@ -9,7 +9,7 @@ Meteor.startup(() => {
               subtopics: [{
                   _id: 1,
                   name: "Finance",
-                  image: ""
+                  image: "./topics/finance.png"
                 },{
                   _id: 2,
                   name: "Marketing",
@@ -17,11 +17,11 @@ Meteor.startup(() => {
                 },{
                   _id: 3,
                   name: "Entrepreneurship",
-                  image:""
+                  image:"./topics/entrepreneurship.png"
                 },{
                   _id: 4,
                   name: "Leadership and Management",
-                  image:""
+                  image:"./topics/leadership.png"
             }]
           },{
             name: "Arts and Humanities",
@@ -29,15 +29,15 @@ Meteor.startup(() => {
             subtopics: [{
               _id: 5,
               name: "History",
-              image: ""
+              image: "./topics/history.png"
             },{
               _id: 6,
               name: "Philosophy",
-              image:""
+              image:"./topics/philosophy.png"
             },{
               _id: 7,
-              name: "Music and Art",
-              image:""
+              name: "Music & Art",
+              image:"./topics/music.png"
             }]
         },{
             name: "Computer Science",
@@ -45,19 +45,15 @@ Meteor.startup(() => {
             subtopic: [{
                 _id: 8,
                 name: "Software Developer",
-                image: ""
-            },{
-                _id: 9,
-                name: "Algorithms",
-                image:""
+                image: "./topics/software.png"
             },{
                 _id: 10,
-                name: "Mobile and Web Development",
-                image:""
+                name: "Mobile & Web Development",
+                image:"./topics/mobile.png"
             },{
                 _id: 11,
-                name: "Computer Security and Networks",
-                image:""
+                name: "Computer Security & Networks",
+                image:"./topics/security.png"
             }]
         },{
             name: "Data Science",
@@ -65,15 +61,15 @@ Meteor.startup(() => {
             subtopic: [{
                 _id: 12,
                 name: "Data Analysis",
-                image: ""
+                image: "./topics/analysis.png"
             },{
                 _id: 13,
                 name: "Machine Learning",
-                image:""
+                image:"./topics/machine.png"
             },{
                 _id: 14,
                 name: "Probability and Statistics",
-                image:""
+                image:"./topics/statistics.png"
             }]
         },{
             name: "Math & Logic",
@@ -81,15 +77,15 @@ Meteor.startup(() => {
             subtopic: [{
                 _id: 15,
                 name: "Calculus",
-                image: ""
+                image: "./topics/calculus.png"
             },{
                 _id:16,
                 name: "Game Theory",
                 image:""
             },{
                 _id: 17,
-                name: "Probability and Statistics",
-                image:""
+                name: "Probability & Statistics",
+                image:"./topics/game.png"
             }]
         },{
             name: "Social Sciences",
@@ -97,19 +93,15 @@ Meteor.startup(() => {
             subtopic: [{
                 _id: 18,
                 name: "Economics",
-                image: ""
+                image: "./topics/economics.png"
             },{
                 _id: 19,
                 name: "Education",
-                image:""
+                image:"./topics/education.png"
             },{
                 _id: 20,
                 name: "Law",
-                image:""
-            },{
-                _id: 21,
-                name: "Psychology",
-                image:""
+                image:"./topics/law.png"
             }]
       }];
       for (let i = 0; i < topics.length; i+=1) {

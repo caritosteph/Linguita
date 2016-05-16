@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
-import SubTopic from '/client/components/profile/subTopic.jsx'
+import SubTopic from '/client/components/profile/subTopic.jsx';
 
 export default class ListSubTopics extends TrackerReact(Component) {
 
   getSubTopics(){
-    return this.props.listSubTopics;
+    return LIST_SUBTOPICS;//this.props.listSubTopics;
   }
   render(){
     let subtopics = this.getSubTopics();

@@ -14,14 +14,13 @@ export default class Topic extends Component {
     this.setState({
       showSubTopics: true
     });
+    LIST_SUBTOPICS = this.props.topic.subtopics;
+    FlowRouter.go('subtopics');
   };
   render(){
     return(
       <div className="col l4 m4 s12">
-            {this.state.showSubTopics ?
-                <ListSubTopics listSubTopics={this.props.topic.subtopics}/> :
-                <img className="topic-container" src ={this.props.topic.image} onClick={this.getSubTopics}/>
-            }
+          <img className="topic-container" src ={this.props.topic.image} onClick={this.getSubTopics}/>
       </div>
 
     );
