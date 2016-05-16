@@ -13,16 +13,12 @@ Meteor.startup(() => {
                 },{
                   _id: 2,
                   name: "Marketing",
-                  image:""
+                  image:"./topics/marketing.png"
                 },{
                   _id: 3,
                   name: "Entrepreneurship",
                   image:"./topics/entrepreneurship.png"
-                },{
-                  _id: 4,
-                  name: "Leadership and Management",
-                  image:"./topics/leadership.png"
-            }]
+              }]
           },{
             name: "Arts and Humanities",
             image: "./topics/art&humanities.png",
@@ -42,7 +38,7 @@ Meteor.startup(() => {
         },{
             name: "Computer Science",
             image: "./topics/computerscience.png",
-            subtopic: [{
+            subtopics: [{
                 _id: 8,
                 name: "Software Developer",
                 image: "./topics/software.png"
@@ -58,7 +54,7 @@ Meteor.startup(() => {
         },{
             name: "Data Science",
             image: "./topics/datascience.png",
-            subtopic: [{
+            subtopics: [{
                 _id: 12,
                 name: "Data Analysis",
                 image: "./topics/analysis.png"
@@ -68,29 +64,29 @@ Meteor.startup(() => {
                 image:"./topics/machine.png"
             },{
                 _id: 14,
-                name: "Probability and Statistics",
+                name: "Statistics",
                 image:"./topics/statistics.png"
             }]
         },{
             name: "Math & Logic",
             image: "./topics/math&logic.png",
-            subtopic: [{
+            subtopics: [{
                 _id: 15,
                 name: "Calculus",
                 image: "./topics/calculus.png"
             },{
                 _id:16,
                 name: "Game Theory",
-                image:""
+                image:"./topics/game.png"
             },{
                 _id: 17,
-                name: "Probability & Statistics",
-                image:"./topics/game.png"
+                name: "Probability",
+                image:"./topics/probability.png"
             }]
         },{
             name: "Social Sciences",
             image: "./topics/socialsciences.png",
-            subtopic: [{
+            subtopics: [{
                 _id: 18,
                 name: "Economics",
                 image: "./topics/economics.png"
