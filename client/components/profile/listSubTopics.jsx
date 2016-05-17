@@ -10,20 +10,14 @@ export default class ListSubTopics extends TrackerReact(Component) {
   render(){
     let subtopics = this.getSubTopics();
     return(
-      <main>
-        <div className="container">
-          <div className="row">
-              <div id="color-usage" className="section scrollspy">
-                <h5 class="col s12 m3">Choose your sub-topics: </h5>
-                <div className="center">
-                  {subtopics.map((subtopic) =>{
-                      return <SubTopic key={subtopic._id} subtopic={subtopic}/>
-                  })}
-                </div>
-              </div>
-          </div>
+      <div>
+        <h5 class="col s12 m3">Choose your sub-topics: </h5>
+        <div className="center">
+            {subtopics.map((subtopic) =>{
+              return <SubTopic key={subtopic._id} subtopic={subtopic}/>
+            })}
+        </div>
       </div>
-    </main>
     );
   }
 }

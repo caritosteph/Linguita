@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 import { Meteor } from 'meteor/meteor';
 
-export default class Login extends React.Component{
+export default class Login extends TrackerReact(Component){
   onLogin(e){
     e.preventDefault();
+    Meteor.subscribe("users");
+    Meteor.subscribe("topics");
     Meteor.loginWithGoogle({
         requestPermissions: ['email', 'profile'],
         requestOfflineToken: 'true'
@@ -13,6 +15,7 @@ export default class Login extends React.Component{
         alert('error : '+ err);
         throw new Meteor.Error(Accounts.LoginCancelledError.numericError, 'Error');
       }else{
+        Meteor.call('updateStatus',Meteor.userId(),true);
         FlowRouter.go('interests')
       }
     });

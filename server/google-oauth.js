@@ -1,8 +1,8 @@
 import { ServiceConfiguration } from 'meteor/service-configuration';
 import { Meteor } from 'meteor/meteor';
 
-const settings = Meteor.settings.google;
-console.log(settings)
+// const settings = Meteor.settings.google;
+// console.log(settings)
 // if(settings){
     ServiceConfiguration.configurations.update(
     { service: "google" },
@@ -11,7 +11,5 @@ console.log(settings)
         secret: "yNdBv4AJf_NVk6uo2ST_Foyb",
         loginStyle: "popup"
       }
-    },
-    { upsert: true }
-  );
+    });
 // }

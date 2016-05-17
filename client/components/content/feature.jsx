@@ -9,8 +9,8 @@ export default Feature = () => (
                     <h4 className="center text_h4">Linguita match you with native Language partners with whom can talk about the topic that you want in the moment.</h4>
                     <br/>
                 </div>
-                <div  className="my-features">
-                    <div className="col s12 m3">
+            <div  className="my-features">
+                <div className="col s12 m3">
                     <div className="card card-avatar">
                         <div className="waves-effect waves-block waves-light">
                             <img className="activator" src="./avatar1.png"/>
@@ -56,10 +56,10 @@ export default Feature = () => (
                         </div>
                     </div>
                 </div>
-                    
+
             </div>
         </div>
-                
+
         </div>
     </div>
 );

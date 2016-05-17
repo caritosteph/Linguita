@@ -3,7 +3,7 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
 export default class SubTopic extends TrackerReact(Component) {
   getSubTopics(){
-    alert('subtopic');
+    FlowRouter.go("partners");
   }
   render(){
     return(

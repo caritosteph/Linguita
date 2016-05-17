@@ -10,6 +10,7 @@ import Footer from '/client/components/footer/footer.jsx';
 import Header from '/client/components/profile/header/header.jsx';
 import ListTopics from '/client/components/profile/listTopics.jsx';
 import ListSubTopics from '/client/components/profile/listSubTopics.jsx';
+import ListPartner from '/client/components/profile/listPartner.jsx';
 
 /*global FlowRouter*/
 
@@ -40,6 +41,16 @@ FlowRouter.route("/subtopics",{
         mount(ProfileLayout,{
             navbar : <Header/>,
           content: <ListSubTopics/>,
+            footer: <Footer/>
+        })
+    }
+});
+FlowRouter.route("/partners",{
+    name:'partners',
+    action(){
+        mount(ProfileLayout,{
+            navbar : <Header/>,
+          content: <ListPartner/>,
             footer: <Footer/>
         })
     }

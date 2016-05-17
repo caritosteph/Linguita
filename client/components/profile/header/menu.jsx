@@ -4,7 +4,7 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 export default class Menu extends TrackerReact(Component){
   onLogout(e){
     e.preventDefault();
-    console.log("me estoy lanzando onLogut+");
+    Meteor.call('updateStatus',Meteor.userId(),false);
     Meteor.logout(function(err){
       if(err){
         alert('error : '+ err);

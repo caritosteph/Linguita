@@ -112,16 +112,21 @@ Meteor.startup(() => {
 });
 
 
-/*Meteor.publish("users", function() {
+Meteor.publish("users", function() {
     return Meteor.users.find();
+});
+Meteor.publish("topics", function() {
+    return Topics.find();
+});
+Meteor.publish("conectedUsers", function(){
+  return Meteor.users.find({status:false});
 });
 Meteor.publish("chats", function() {
     if (this.userId) {
         return Chats.find();
-
     }
     return;
-});
+});/*
 Meteor.publish('emojis', function() {
   return Emojis.find();
 });

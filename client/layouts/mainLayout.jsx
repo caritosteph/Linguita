@@ -11,7 +11,15 @@ export const MainLayout = ({navbar,content,footer})=>(
 export const ProfileLayout = ({navbar,content,footer}) =>(
   <div>
     {navbar}
-    {content}
+    <main>
+      <div className="container">
+        <div className="row">
+          <div id="color-usage" className="section scrollspy">
+              {content}
+          </div>
+        </div>
+    </div>
+  </main>
     {footer}
   </div>
 );
