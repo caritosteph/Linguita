@@ -118,9 +118,6 @@ Meteor.publish("users", function() {
 Meteor.publish("topics", function() {
     return Topics.find();
 });
-Meteor.publish("conectedUsers", function(){
-  return Meteor.users.find({status:false});
-});
 Meteor.publish("chats", function() {
     if (this.userId) {
         return Chats.find();

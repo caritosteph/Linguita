@@ -5,10 +5,17 @@ export default class ListPartner extends Component {
   constructor(props){
     super(props);
   }
-
+  getConnectedUsers(){
+    return Meteor.users.find({status:true}).fetch();
+  }
   render(){
+    let connectedUsers = this.getConnectedUsers();
     return(
-        <Partner/>
+      <div>
+        {connectedUsers.map((connected)=>{
+          return <Partner key= {connected._id} profile = {connected.services.google} info={connected}/>
+        })}
+      </div>
     );
   }
 }

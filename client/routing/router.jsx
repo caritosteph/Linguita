@@ -12,6 +12,7 @@ import ListTopics from '/client/components/profile/listTopics.jsx';
 import ListSubTopics from '/client/components/profile/listSubTopics.jsx';
 import ListPartner from '/client/components/profile/listPartner.jsx';
 
+import ChatRoom from '/client/components/chatRoom/chatRoom.jsx';
 /*global FlowRouter*/
 
 FlowRouter.route("/",{
@@ -51,6 +52,16 @@ FlowRouter.route("/partners",{
         mount(ProfileLayout,{
             navbar : <Header/>,
           content: <ListPartner/>,
+            footer: <Footer/>
+        })
+    }
+});
+FlowRouter.route("/chatroom",{
+    name:'chatroom',
+    action(){
+        mount(ProfileLayout,{
+            navbar : <Header/>,
+          content: <ChatRoom/>,
             footer: <Footer/>
         })
     }
