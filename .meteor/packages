@@ -22,3 +22,4 @@ kadira:flow-router
 accounts-google
 accounts-ui
 ultimatejs:tracker-react@=1.0.0
+session

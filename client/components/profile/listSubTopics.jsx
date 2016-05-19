@@ -5,8 +5,8 @@ import SubTopic from '/client/components/profile/subTopic.jsx';
 export default class ListSubTopics extends TrackerReact(Component) {
 
   getSubTopics(){
-    return LIST_SUBTOPICS;
-  }
+      return Session.get('list_subtopics');
+    }
   render(){
     let subtopics = this.getSubTopics();
     return(

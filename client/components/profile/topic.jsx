@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
-import ListSubTopics from '/client/components/profile/listSubTopics.jsx'
+import ListSubTopics from '/client/components/profile/listSubTopics.jsx';
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
-export default class Topic extends Component {
+export default class Topic extends TrackerReact(Component) {
   constructor(props){
     super(props);
     this.getSubTopics = this.getSubTopics.bind(this)
   }
 
   getSubTopics(){
-    LIST_SUBTOPICS = this.props.topic.subtopics;
-    /*Meteor.user.update({_id:Meteor.userId()},{$set:{''}});*/
+    Session.set('list_subtopics',this.props.topic.subtopics);
     FlowRouter.go('subtopics');
-
   };
   render(){
     return(

@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Message from '/client/components/chatRoom/message.jsx';
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
-export default class ChatRoom extends Component {
+
+export default class ChatRoom extends TrackerReact(Component) {
   constructor(props){
     super(props);
      Meteor.subscribe("chats");
@@ -10,7 +12,8 @@ export default class ChatRoom extends Component {
     FlowRouter.go('partners');
   }
   sendMessage(e){
-    event.preventDefault();
+    e.preventDefault();
+
     let chat = Chats.findOne({
           _id: Session.get("chatId")
     });
@@ -42,26 +45,24 @@ export default class ChatRoom extends Component {
     return chat.messages;
   }
   render(){
-    let messages = this.getMessages.bind(this);
+    let message = this.getMessages.bind(this)
+    let chat = message?message: [] ;
+    console.log(message);
     return(
       <div>
-        <h2 class="text_h4">Type in the box below to send a message!</h2>
+        <h4 class="text_h4 center">Type in the box below to send a message!</h4>
             <div class="col-md-12">
                 <div class="well well-lg">
-                  {
-                    messages.map((messages)=>{
-                      return <Message key={message._id} message = messages.messages/>
-                    })
-                  }
+
                 </div>
             </div>
             <div class="col s12">
-                <form class="js-send-chat">
+                <form>
                     <div class="col m10">
                         <input class="input" type="text" id="chat" name="chat" placeholder="type a message here..." ref="message"/>
                     </div>
                     <div class="col m2">
-                        <button class="btn btn-default" onSubmit = {this.sendMessage}>send</button>
+                        <button class="btn btn-default" onClick = {this.sendMessage}>send</button>
                     </div>
                 </form>
             </div>

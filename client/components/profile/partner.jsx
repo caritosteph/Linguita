@@ -4,12 +4,12 @@ export default class Partner extends Component {
   constructor(props){
     super(props);
   }
-  startChatRoom(){
-    FlowRouter.go('chatroom');
+  startChatRoom(e){
+    FlowRouter.go('/chatroom/'+e.target.id);
   }
   render(){
-    let style = {};
-    if(this.props.info._id==Meteor.userId()){
+    const style = {};
+    if(this.props.info._id === Meteor.userId()){
       style.display = 'none';
     }
 
@@ -25,10 +25,10 @@ export default class Partner extends Component {
                   <br/>
                   <div className="col m12">
                     <div className ="col m6">
-                      <button className="waves-effect waves-light  blue darken-4 btn" onClick={this.startChatRoom}>Chat</button>
+                      <button className="waves-effect waves-light  blue darken-4 btn" onClick={this.startChatRoom} id={this.props.info._id}>Chat</button>
                     </div>
                     <div className ="col m6">
-                      <button className="waves-effect waves-light  green darken-4 btn">Talk</button>
+                      <button className="waves-effect waves-light  green darken-4 btn"id={this.props.info._id}>Talk</button>
                     </div>
                   </div>
               </div>
