@@ -367,6 +367,11 @@ i.tamanio{
   height: 88px;
   border-radius: 54px;
 }
+.avatar-chat{
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+}
 li.card-user{
   background-color: #673AB7;
 }

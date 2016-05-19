@@ -123,7 +123,9 @@ Meteor.publish("chats", function() {
         return Chats.find();
     }
     return;
-});/*
+});
+
+/*
 Meteor.publish('emojis', function() {
   return Emojis.find();
 });

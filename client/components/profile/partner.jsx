@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 
 export default class Partner extends Component {
   constructor(props){
+
     super(props);
   }
   startChatRoom(e){
+    console.log("creando chat...");
     FlowRouter.go('/chatroom/'+e.target.id);
   }
   render(){

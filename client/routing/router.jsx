@@ -59,6 +59,7 @@ import ChatRoom from '/client/components/chatRoom/chatRoom.jsx';
   FlowRouter.route("/chatroom/:_id",{
       name:'chatroom',
       action:function(params){
+          console.log("chatroom: ",params);
           let otherUserId = params._id
           let filter = {
            $or: [{
@@ -69,11 +70,16 @@ import ChatRoom from '/client/components/chatRoom/chatRoom.jsx';
                user1Id: otherUserId
            }]
          };
+
          Meteor.call('addChat', filter, otherUserId, function(error, result) {
+           console.log("llamando a addchat")
            if (!error) {
-               console.log("result: ", result);
+             console.log("se llamo bien llamando a addchat")
                if (result) {
-                   Session.set("chatId", result);
+                 console.log("result:",result)
+                 Session.set("chatId", result);
+                 console.log(Session.get("chatId"))
+                 
                }
            }
          });

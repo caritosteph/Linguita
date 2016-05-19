@@ -7,9 +7,10 @@ export default class Login extends TrackerReact(Component){
     e.preventDefault();
     Meteor.subscribe("users");
     Meteor.subscribe("topics");
+    Meteor.subscribe("chats");
+
     Meteor.loginWithGoogle({
         requestPermissions: ['email', 'profile'],
-        requestOfflineToken: 'true'
     },function(err){
       if(err){
         alert('error : '+ err);

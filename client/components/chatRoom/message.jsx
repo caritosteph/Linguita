@@ -6,13 +6,14 @@ export default class Message extends Component {
   }
 
   render(){
+    let user = this.props.message.userInfo;
     return(
-    <div class="col m10">
-       <div class="col m2">
-           <img src={this.props.chat} class="avatar_img2"/>
+    <div className="col m10">
+       <div className="col m1">
+           <img src={user.picture} className="avatar-chat"/>
        </div>
-       <div class="col m8">
-           <strong>{this.props.chat}</strong> {this.props.chat.messages}
+       <div className="col m8">
+           <strong>{user.given_name}</strong> {this.props.message.text}
        </div>
      </div>
     );

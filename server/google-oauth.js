@@ -11,5 +11,5 @@ import { Meteor } from 'meteor/meteor';
         secret: "yNdBv4AJf_NVk6uo2ST_Foyb",
         loginStyle: "popup"
       }
-    });
+    },{upsert:true});
 // }
