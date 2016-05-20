@@ -7,10 +7,11 @@ Meteor.methods({
               console.log("no existe chat ..creandolo ");
             let users = {
                 user1Id: Meteor.userId(),
-                user2Id: otherUserId
+                user2Id: otherUserId,
+                messages: []
             };
-              console.log("creando users: ", users);
-            return Chats.insert(users);
+            let insert = Chats.insert(users);
+            return insert;
         }
         console.log("addChat: ",chat._id);
         return chat._id;

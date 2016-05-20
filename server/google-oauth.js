@@ -7,8 +7,8 @@ import { Meteor } from 'meteor/meteor';
     ServiceConfiguration.configurations.update(
     { service: "google" },
     { $set: {
-        clientId:"690649158620-kig7toe1pm7l9dmvr4nhfrhiqkcprv0a.apps.googleusercontent.com",
-        secret: "yNdBv4AJf_NVk6uo2ST_Foyb",
+        clientId:"xxx",
+        secret: "xxx",
         loginStyle: "popup"
       }
     },{upsert:true});

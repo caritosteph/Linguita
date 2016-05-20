@@ -70,24 +70,22 @@ import ChatRoom from '/client/components/chatRoom/chatRoom.jsx';
                user1Id: otherUserId
            }]
          };
-
          Meteor.call('addChat', filter, otherUserId, function(error, result) {
            console.log("llamando a addchat")
            if (!error) {
              console.log("se llamo bien llamando a addchat")
                if (result) {
-                 console.log("result:",result)
                  Session.set("chatId", result);
-                 console.log(Session.get("chatId"))
                  
+                 mount(ProfileLayout,{
+                     navbar : <Header/>,
+                     content: <ChatRoom/>,
+                     footer: <Footer/>
+                 });
                }
            }
          });
 
-          mount(ProfileLayout,{
-              navbar : <Header/>,
-            content: <ChatRoom/>,
-              footer: <Footer/>
-          })
+
       }
   });

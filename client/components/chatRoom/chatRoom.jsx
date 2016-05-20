@@ -17,9 +17,9 @@ export default class ChatRoom extends TrackerReact(Component) {
     });
     if (chat) {
       let msgs = chat.messages;
-      if (!msgs) {
-        msgs = [];
-      }
+      // if (!msgs) {
+      //   msgs = [];
+      // }
       let  user = Meteor.users.findOne({
                 _id: Meteor.userId()
             });
@@ -37,9 +37,9 @@ export default class ChatRoom extends TrackerReact(Component) {
     }
   }
   getMessages(){
-    // let chat = Chats.findOne({_id: Session.get("chatId")});
     console.log("get message aqui bota el error");
-    return (typeof Chats.findOne({_id: Session.get("chatId")}).messages === "undefined") ? [] : Chats.findOne({_id: Session.get("chatId")}).messages ;
+    console.log("chat -... : ",Chats.findOne({_id: Session.get("chatId")}))
+    return Chats.findOne({_id: Session.get("chatId")}).messages;
   }
 
   render(){
